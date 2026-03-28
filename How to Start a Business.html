@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Future</title>
+<link rel="icon" href="Untitled.png" type="image/png">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* CLICKABLE CARD */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background: #334155;
+}
+
+.card h3 {
+    color: #38bdf8;
+}
+
+.video-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 300px;
+    
+}
+
+.video-banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.overlay h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.particles::before, .particles::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(rgb(255, 255, 255) 2px, transparent 2px);
+    background-size: 50px 50px;
+    animation: moveParticles 20s linear infinite;
+}
+
+@keyframes moveParticles {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50%, -50%); }
+}
+
+.form-control-search {
+    width: 60%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #38bdf8;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.image-link {
+            display: block; 
+            width: 150px;
+            margin: 0 auto; 
+        }
+        .image-link img {
+            width: 100%; 
+            height: auto;
+        }
+
+  .glow-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .image-link:hover .glow-image {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6);
+    filter: brightness(1.1);
+  }
+
+</style>
+</head>
+
+<body>
+    
+    <div class="particles"></div>
+    <div class="video-banner">
+    <video autoplay muted loop playsinline>
+        <source src="Video Project.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+
+
+        <a href="about_us.html" target="_blank" class="image-link">
+    <img src="Untitled.png" alt="Description of your image" class="glow-image">
+</a>
+
+    
+        <h1>Welcome to Your Future</h1>
+        <p>Explore powerful business ideas and guides</p>
+    </div>
+    </div>
+<header>
+    <h1>How to Start a Business 📈</h1>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search articles..." onkeyup="searchArticles()">
+    </div>
+</header>
+
+
+
+
+<div id="articles">
+
+<!-- ARTICLE 1 -->
+<a href="article1.html" class="card">
+    <h3>How to identify your plan</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 2 -->
+<a href="article2.html" class="card">
+    <h3>Starting Your Own Business: A Complete Guide</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 3 -->
+<a href="article3.html" class="card">
+    <h3>The Benefits of Starting Your Own Business</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 4 -->
+<a href="article4.html" class="card">
+    <h3>Top 10 Small Business Ideas for Beginners</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 5 -->
+<a href="article5.html" class="card">
+    <h3>How to Create a Business Plan Step-by-Step</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 6 -->
+<a href="article6.html" class="card">
+    <h3>How to Find Your First Customers</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 7 -->
+<a href="article7.html" class="card">
+    <h3>Online Business vs Offline Business: Which is Better?</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 8 -->
+<a href="article8.html" class="card">
+    <h3>How to Start a Business with No Money</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 9 -->
+<a href="article9.html" class="card">
+    <h3>Marketing Strategies for New Businesses</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 10 -->
+<a href="article10.html" class="card">
+    <h3>How to Build a Strong Brand Identity</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 11 -->
+<a href="article11.html" class="card">
+    <h3>Common Mistakes New Entrepreneurs Make</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 12 -->
+<a href="article12.html" class="card">
+    <h3>How to Price Your Products or Services</h3>
+    <p>Click to read full article...</p>
+</a>
+
+<!-- ARTICLE 13 -->
+<a href="article13.html" class="card">
+    <h3>How to Use Social Media to Grow Your Business</h3>
+    <p>Click to read full article...</p>
+</a>
+
+</div>
+
+<script>
+function searchArticles() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+
+</script>
+<br>
+<center >
+<h1>
+    Search for more information on Google:
+</h1>
+
+<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<input name="sitesearch" type="hidden" value="">
+<input autocomplete="on" class="form-control-search" name="q" placeholder="Search in for other websites that might help" required="required"  type="text">
+<button class="button" type="submit">Search</button>
+</form>
+</center>
+<br>
+<br>
+<br>
+<footer style="text-align: center; padding: 20px; color: #94a3b8;">
+    &copy; 
+    2026 Your Future,NewLands. All rights reserved.<img src="Untitled.png" alt="Description of your image" style="width: 20px; height: 20px; vertical-align: middle;" class="glow-image">
+</footer>
+<br>
+<br>
+<br>
+</body>
+</html>
